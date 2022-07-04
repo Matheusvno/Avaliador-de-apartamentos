@@ -1,0 +1,247 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Dispacher" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <sap:VirtualizedContainerService.HintSize>1696,1250</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="76">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Windows.Forms</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualStudio.Services.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR</AssemblyReference>
+      <AssemblyReference>UiPath.Python</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>WindowsFormsIntegration</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Data.Entity</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="476,1185" sap2010:WorkflowViewState.IdRef="Sequence_31">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="dt_Apartamentos" />
+      <Variable x:TypeArguments="ue:IReadWriteRangeRef" Name="teste" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Pesquisar regiao" sap:VirtualizedContainerService.HintSize="434,921" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" IsIncognito="True" OpenMode="IfNotOpen" ScopeGuid="c5f3fae3-47e0-42cf-ba29-b475236529bf" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,705" sap2010:WorkflowViewState.IdRef="Sequence_32">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Alugar'" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c5f3fae3-47e0-42cf-ba29-b475236529bf" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.zapimoveis.com.br/" DesignTimeRectangle="899, 528, 84, 52" ElementType="Button" FriendlyName="'Alugar'" FullSelectorArgument="&lt;webctrl aaname='Alugar' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Alugar' tag='BUTTON' type='button' class='business-filter__button js-business' check:innerText='Alugar' /&gt;" Guid="833977ca-1dab-4010-814b-bfcdde943088" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFgAAAA4CAYAAAB5YT9uAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOsSURBVHhe7ZzfS9tQFMd93h+7ixAkCEHsIMgqlEERKwRBYRV9MIKI9KEyOlaQ+FCkRQojsEotWJGABAnIdye/2qTKQOzptJwPXOjNTU7MJ/eee/LiAgRWRDAzC58/dRC2m5sbaVNud3d3ecHCdAmdimBGRDAzIpgZEcyMCGZGBDMjgpkRwcyIYGZEMDMimBkRzIwIZkYEMyOCmRHBzIhgZmYq2HMdON1h0sszODWhlIVW0p8XZif4qY2qrqAWK3Aek2MZRPBb6VShL+rQSXLph5ccHCOC30QAZ4tm75aD7qEBtV7HpOK8YA/uhYN2P4h6KVGKcfNXBrct1PZ3sLNro/nHg99vw+kM6I5jgnsXzaPwnB0cnLYwzA7SmHPhYuj14nN+9pKB6TAbwV4DJaWj2qHf1zYKqgD7Oh5KyQtuwVIK5ukg6qW0tuklbY/neHBZhbGooK2UYO1aKK1o0Jd1KLOG9Eq/ZUFXGoxvFgmmcwyKsUz38ZMTaFzR36YvUxzDgLHfTgamw0wEe2dFKL2K9lPY68FeVTAO3Wgs5fWC4zhqswkviks8DVD7SsdGgl0crxkonmTu5TdRptijNJUIts6fp61pMAPBsQh9r5v0J4XHvFrwbQ1FOse6iLspUZzMDB4TwPc8eF4X9pdM7Ehwet/pwy84SgmUHi7Dh0uaewyT5FTOx8nw1YL7xxTXRG3C5DPBdw6qaxrFpmuXKAWsGNAorcyN4PZ3yonhw73UaNNLFb9a8KBGL8mAnc80E4KT1bPVzGxslEbMeRH8RKKysyVDcF6hByuifh/384Jd2CsKhZP8dY6VEfzooEKxi2f53Dk4KYwFRy+B0kjOXhx7LgRPSswxISgvOCnraLd37mnqPfro/apQNZARTHT3aHUsFmFfDREEAYZXNooUcyQ4+bjRNxvohanp1kXdojIxuzo+rmAP9XV62Bdq3pRoya/atJAnBRP9BsphSRVKpaaZB6iW6XdGcFg1NDZiYVEzyqhamRlM+J0DmFoaR4O5X8cBpYiw+oiyxoff5N5I8EAfDy98WuegGe49xEm2vUvysptcRFxB+KM8PDveveB/MTgto3zWG22UwfVxlCIKR9P9GnsLH1qw/9tGaYlmrKbDWI5LMWOjgUGmvv7ffGjBMbT8afNqX7oYJmniPTEHgt83IpgZEcyMCGZGBDMjgpkRwcyIYGZEMDMimBkRzIwIZkYEMyOCmRHBzIhgZp4JljbdFv1LmUS2wIQIZgX4C9MtoFPIlWvnAAAAAElFTkSuQmCC" InformativeScreenshot="5f759fa44c8fa57d69f4ae108e694875.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ZAP Imóveis | Apartamentos, Casas e Imóveis à Venda e para Alugar' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <uix:NSelectItem DisplayName="Select Item 'Qual tipo?'" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="Apartamento" ScopeIdentifier="c5f3fae3-47e0-42cf-ba29-b475236529bf" Version="V1">
+              <uix:NSelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="21">
+                  <x:String>Todos os imóveis</x:String>
+                  <x:String>Apartamento</x:String>
+                  <x:String>Studio</x:String>
+                  <x:String>Kitnet</x:String>
+                  <x:String>Casa</x:String>
+                  <x:String>Casa de Condomínio</x:String>
+                  <x:String>Casa de Vila</x:String>
+                  <x:String>Cobertura</x:String>
+                  <x:String>Flat</x:String>
+                  <x:String>Loft</x:String>
+                  <x:String>Terreno / Lote / Condomínio</x:String>
+                  <x:String>Fazenda / Sítio / Chácara</x:String>
+                  <x:String>Loja / Salão / Ponto Comercial</x:String>
+                  <x:String>Conjunto Comercial / Sala</x:String>
+                  <x:String>Casa Comercial</x:String>
+                  <x:String>Hotel / Motel / Pousada</x:String>
+                  <x:String>Andar / Laje Corporativa</x:String>
+                  <x:String>Prédio Inteiro</x:String>
+                  <x:String>Terrenos / Lotes Comerciais</x:String>
+                  <x:String>Galpão / Depósito / Armazém</x:String>
+                  <x:String>Garagem</x:String>
+                </scg:List>
+              </uix:NSelectItem.Items>
+              <uix:NSelectItem.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.zapimoveis.com.br/" DesignTimeRectangle="1136, 528, 192, 52" ElementType="DropDown" FriendlyName="'Todos os imóveis'" FullSelectorArgument="&lt;webctrl tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SELECT' type='' class='l-select__item l-select__input' aaname='Qual tipo?' /&gt;" Guid="91121c54-d1cc-4b48-99f1-e1f14eadd9ac" InformativeScreenshot="c5f182088bd852ad0a42dee5e060c86c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ZAP Imóveis | Apartamentos, Casas e Imóveis à Venda e para Alugar' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="1136, 496, 71, 24" ElementType="Text" FriendlyName="'Qual tipo?'" FullSelectorArgument="&lt;webctrl aaname='Qual tipo?' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Qual tipo?' tag='LABEL' type='' class='color-dark text-regular l-select__label' check:innerText='Qual tipo?' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEsAAAAcCAYAAAApxUKlAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARmSURBVGhD7ZfRhyNJHMfvj+unZglDiIuw47hYNuYhrOTl8rJxnBzblo1hY1hZRpbolwgnw5q1NEs9rAwrw8oQPYYQmhDCd7/VXel0dzoz6ZHs3dFfQqq6q36/+tSvfr/qX5BqZ6WwEiiFlUAprARKYSVQCiuBUlgJFAtrei3Qe2+g1R1AXE9V775lw3yuQXslVHs3TS0T5tfD+GRfDWC+NdDuC4xiTIRhOUO0nunQNB3ZQh75Qha6pkF/YcJeqnf2podhOaID41zAUW2ignnCMZVBoG8fsjH4I7ted1YyyML4ErYSgDXFoMKXcgasmeqSuumhltOQfS2wUF370cOw7G4J2nNulGq7Wi6w2PfGXTWR0Y7R+qba3IrLl2RxYpLKWmtY7oAMml9VOyDnokbSZfTUyMVEwPo8Ck2EuQ3xWcCeq7bUcorRRRvGawPGWxPiVvW7ugeWO5eF3t95aIUGevwvJnKrFrCFBctPDV5bTBw43wdox9pRWtoY9j1fWl0L42BAcAOcWTgU3I3KtTBSbSkflvtQa8CK27XZAFUex/pHb0LvXQOhZd6aKGklmCtHHQGDEak/raJBBxuVPI90MLTvgTUT6MgxJxloRyV3fEfIcdExXjuTyyLj2mmg+jTmCE1MlJ+sfanLVKMXGRjbDvMUvRd8/8/L0GnyYYlXdCIa8r64cMIqdb2nu8AanZeQL3cw9uE7zAu04eebxxzDeFj6S865ssMIMk8I4zfadjvUwnmk1nnX4XqZo3JNDDeCw8HwtAhd51omqkvpYLBCmvOYzByM3hcDNvYHa+WXL6tB/+jLHf/fSb90Rpr3yNekg6JMO1eqrSRt6luizoc1PGXIF9pqN6J6BCzmK+tNCRmdi9MzrKysMkfc8Z8BK+jLF8MDt7GJ3ppCEOeXqNPfcj/m3kD5sJx/qpy0ikEw8a30vY283B3l4y6wxufHDPM6BgEnw4s/ICzXX+WL+7+ITuRIuWCisO5Y+QtlmDeqHZEPC1MmcVItfYgYpoanPN9H6/O9+FgnrEgxcMN6BSsexPgdq9sBYBUjPk/7ZfpXx6WszFuiZfGpzoITF3HbtYZFSedkxap1h7CZY5zZGOKszD4dtYuAsZsOjtlX+jB27zyL2yHaMqkGjA/fyErGyLqR89gY9RvIyyOZFJbOOWS0uxsTD0vL1dC79uqW862NEu0E74Xjd4xyJuz2lbeGxWSAurw7cp5QZmJxuOTVY7ilSIZgSY0vGiiyzGoMUf9X5gJDVYMV44wVY/Vcz6N2ynHBnfK/Brx39Gct9M7k8VU7vgMs3Pbcki/He0ctHlbxryZqv65s6chUzEAVppasfrTt5k/1zjEr6MZXiQqC+qfwnWulDVgrLRxGxJyXNdFEkUb035sQ0XwWc5nbkKyEwYtqUt1rw4Pl56yHbLlzOY/+AtgKK6Q7C0aFCX3bHe5fUwTWgbUbrP+sUliJ5KaLBzLBvvS/h/UzlcJKoBRWAqWwEiiFtbOAHw3axtbHyNglAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NSelectItem.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NSelectItem>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Onde?'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="c5f3fae3-47e0-42cf-ba29-b475236529bf" Text="Teresópolis" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.zapimoveis.com.br/" DesignTimeRectangle="1344, 528, 280, 52" ElementType="InputBox" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;main&amp;gt;section&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='3' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='typeahead' tag='DIV' aaname='' /&gt;" Guid="6d3ff982-7250-4500-9a23-34451d0868cc" ImageBase64="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" InformativeScreenshot="36f80623e4eb2a9e04ce73a59b9df036.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ZAP Imóveis | Apartamentos, Casas e Imóveis à Venda e para Alugar' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="1344, 496, 45, 24" ElementType="Text" FriendlyName="'Onde?'" FullSelectorArgument="&lt;webctrl aaname='Onde?' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Onde?' tag='LABEL' type='' class='color-darker text-regular' check:innerText='Onde?' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADEAAAAcCAYAAADIrlf0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMYSURBVFhH7ZXPS+NAGIb3j8spsFAQCsXiIQh6sfSwIFsEezHspYLBQy8bFkoXJEKJBy8SQSoLgpCDRFjqpYJEhIAQKAQK776TTmt+2K2uHrrSBwrN5Jvke+b7ZvIJH4CFxLywkJgXFhLzwrMSwY0Lp2PC7DhwbwI5+g7c26goFdj38volDEP03WO0903Ypx78SI4nSEuEPVibKhRFRXGljPJKEaqiQN200AtlzFt4rcTAg7nGfNQCc2E+S+I/59/J+5KERIjuDoNKOroPckjw0IVeoshOlxFv5JUS4UmNSetwHuXAsI/2KnPZd+XAiCeJWwsaK6Cf5+sVneusiAbrVg4EPVz86iEQpT5tw9g32Hou/KG8P2bow2Vbivvt0z7Cu+cl/EsbJmOMn8fwkveiEGGYzsfdU6BsO6kFnUjE1gqrMJADSQasBtuqciT3x6XB2Aoq1QK0rQaM3RrKKleoasMfRXCOi+YyK/tZQ23XQGNLQ6FURCEpQUlnu8iYdeiUaHwtc7GKMC6n1HzoobmkQDvoy4EREwm/U2FiBtKFGuPCEBIdmWIskX7ZqFpMULZi/0CLW6GbyEe8I46REgEXTs3E9Fuct2ohnSYZC5eYY8bxDRKZ2LjfC2hei4sAdpWV2cs8LbUnpsRcN9PVignZRkKgDiezqQXvLKGwOuLCh7WWiB+TkuAz2YIK5+R/GYl4v3KBruR1holEdKbnJ495dFDjw/UzucleIGFvKFg//JsET5oV9nfLQ/jIDZz5RclD4srkEWvg4rn9SiYS8eblymitXDfCP2SVRO+OHzJTIkL3Gzf15jGbJsGdhfWJBGN2uOrZGEH2lJvBkwTxj8TGU/Hlh4t+vCI+vE4dRY6lWmOmBGFvx/O40gELGAUe2lWKJaudjBGJD4PR+5ab8JIna+jB/t7NH+GSlIQguGiiIr6McW/yx+OvwTM+xUskiH9Sj4/e+DlqGY2WkajEiNA1U+9Tl+uwf6ePn9x3KkNOYsKAlch8aP6JYcSKzn5OFPJ9U3p+FtMl/iMWEvPCQmJeWEjMCx9AAvgD9EYeC3j2pX0AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NTypeInto>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Teresópolis - RJ'" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c5f3fae3-47e0-42cf-ba29-b475236529bf" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.zapimoveis.com.br/" DesignTimeRectangle="1369, 641, 213, 24" ElementType="Text" FriendlyName="'Teresópolis - RJ'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;main&amp;gt;section&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;div&amp;gt;li&amp;gt;p' tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='P' class='text-regular text-margin-zero' aaname=' - RJ' check:innerText='Teresópolis - RJ' /&gt;" Guid="d9a2234b-0ece-4ae2-b274-95382b789d2b" ImageBase64="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" InformativeScreenshot="64ffcd2ca898e98e7ee5478c77feefa8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ZAP Imóveis | Apartamentos, Casas e Imóveis à Venda e para Alugar' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Buscar'" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c5f3fae3-47e0-42cf-ba29-b475236529bf" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.zapimoveis.com.br/" DesignTimeRectangle="1640, 527, 120, 53" ElementType="Button" FriendlyName="'Buscar'" FullSelectorArgument="&lt;webctrl aaname=' Buscar' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' Buscar' tag='BUTTON' type='button' class='hero-filters__cta js-filters-cta button button-cta button-cta--standard button--regular' check:innerText='Buscar' /&gt;" Guid="8963b6e7-2a6f-49b3-9da7-de6927938d19" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHwAAAA5CAYAAAD0i09hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASuSURBVHhe7ZxPa1NBFMXFja70M/gRXPgFXApuXLqoYBcKLqUrF3WhFIqQTSlERQpSKEKhKN0IpSBBEaQQhEJAClJoC6EoQiiEwnjOe3cyk+d9abXgy5vcAz9y38ydeSFn/iWQd86ZJkpm+ITpdIbvd5x7+9S5x9ecu3/ZuTvnnZtCU6M66AG9oCf0hh6dQmg5QuykcdO56YvO3b2g39ioHnpDj+jVCcYju0Sbz20m1xF6Ru9KhAxFXCLuXdI7NMYfekcPFaG2II4OM7v+0ENlpqMmEtd/W8bTgV4W9nSURuKmrzU06gs9jYQSEUcCT3paI6O+0NNolqNExE3evnqlBz2NDnAoEfELvNbAqD/0VoQrEX+10ZKN+kNvRbgS2ek8XeitCFciLdFIB1GItCQjHUQh0pKMdBCFSEsy0kEUIi3JSAdRiLQkIx1EIdKSjHQQhUhLMtJBFCItqSpWFpxrLQ/z/pFzjat6vnEyohBpSVWx/UPelKLuunMzShtjNKIQaUlV4Q0/xuvudk43GgTtab2dUY4oRFpSVXjDextR+RXnDvJit/cyL3vxJF/uNx6GPF/WwqsvW0S8vZUPnA5WiJXroS4Dfa+hzY4Mri/In43rwag+4vfxGu+N/WzeHm5fNaIQaUlVoRp+w7nDvNh9f5aXfcAHS8V5vszhldcrqNO07QcJzNa2kD7aN4p9FtSWPnz90VH+Sg36HxNEIdKSqkJb0n/lRaoRpYZjFnblsoNDH81t7UgBXueRv/pRrmFWCzlvMEP9vbI2wPvYwUyewcGx498fZvzQPaH+fv5+bYb/BdqM8/oJg/7F8AMsw69wPQOaMKN5Kz/8+Xt1V0Mf75BL09qyknhmscqw7bofJLwHygf3xCAa1wOlKERaUlVoS/oclki/pB9gv2TZiYbjmkv6sRRRx5iuezB0EbOd9XtS7s8FGku4n5/1QyoaLtfjiChEWlJVaIaTwXJc+KBHGU5mcapvIYcnfW/+EWYp63blutTwaEnfQc7IGR7dc9wQhUhLqgrN8Bl80P6U7s2KP2i/lA4NCpiVnQGQ35T6BpbuTLjHMq63sOdS7NP30ZYyriTLeA+ZJJ/169i7M4nBZvgZifdwnnzj0y/1VU7ATSzNXkcw6TBql3342HP9Ht7D9WeYfSA5fTlwzWPW9vOiP/r4xD1/IawKPQymXTDYImTPNsPPSGx4rB4MaT2IcrEPb/kZTWFgfCt8+LOY5d3CgKH5S7KHE+7RPamjuM+3eUKXei7h8TmAq0Ym5K2h3gz/z2Qnbzl1a/XEn87nIqOLzKGPJlYFrW4KX8fYvviDTF0QhUhLMtJBFCItyUgHUYi0JCMdRCHSkox0EIVISzLSQRQiLclIB1GItCQjHUQh0pKMdBCFyP49mi7qv0ft/+Hpov4/3J4AkS7qEyDsGS9pUvqMF3uKU5qUPsWJsue0pUfpc9oojgQ7racDvYxmN4XSguxZq2lwqmetenGTN9PrC72LDmqxUFsijg5b3usHPVNmthcyRojrPzd9nvTsK9v4Qm/oEb0q7NlFIfsUYidcIvgFnr/a2MyvHnpAL+gJvTnBaC+0NE2SzPCJknO/AfQhUKCCZCzmAAAAAElFTkSuQmCC" InformativeScreenshot="607c01d1f19d48b8181e81d5777ebbd5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ZAP Imóveis | Apartamentos, Casas e Imóveis à Venda e para Alugar' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dt_Apartamentos]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Alugel'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column2' Name='Descrição'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column4' Name='Condomínio'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column6' Name='Localidade'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column8' Name='IPTU'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column11' Name='Link'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;true&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='p' idx='1' /&gt;&lt;webctrl tag='strong' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column2' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column4' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='ul' idx='1' /&gt;&lt;webctrl tag='li' idx='1' /&gt;&lt;webctrl tag='span' idx='2' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column6' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='h2' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column8' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='ul' idx='1' /&gt;&lt;webctrl tag='li' text='IPTU' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column11' attr='href'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NExtractData_1" InteractionMode="Simulate" MaximumResults="0" Version="V1">
+              <uix:NExtractData.NextLink>
+                <uix:TargetAnchorable BrowserURL="https://www.zapimoveis.com.br/aluguel/imoveis/rj+teresopolis/?pagina=31&amp;transacao=Aluguel&amp;tipo=Im%C3%B3vel%20usado&amp;onde=,Rio%20de%20Janeiro,Teres%C3%B3polis,,,,,city,BR%3ERio%20de%20Janeiro%3ENULL%3ETeresopolis,-22.417004,-42.975538," DesignTimeRectangle="1400, 696, 24, 24" ElementType="Button" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;main&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;ul&amp;gt;li&amp;gt;button&amp;gt;span' parentid='app' tag='SPAN' parentclass='pagination__button pagination__button--next js-next-page button button-primary button-primary--outline button--regular button--icon' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='app' tag='SPAN' parentclass='pagination__button pagination__button--next js-next-page button button-primary button-primary--outline button--regular button--icon' class='icon icon-color--current icon-size--regular' aaname='' /&gt;" Guid="2d949efe-330b-4d41-b1a2-303d3d199957" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACDSURBVEhL7dSrDYBAEIRhNJ3QHDVgqIQi0DgqwFACBoNeMgTQzOzmgtg/ueSy5hP3qKxwCYaXYHj/BtfpuJYnCuya1dp6sbHf7gkfBQIC6EHpM/Si0qXxoBKIVFQG52F/Qey/JoEqhmjQgyEK9GKIAp+Hr2KIAot/bRElGF6C4RUGzU6sbARNIagZ+AAAAABJRU5ErkJggg==" ScopeSelectorArgument="&lt;html app='chrome.exe' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="1392, 688, 40, 40" ElementType="Button" FriendlyName="'BUTTON'" FullSelectorArgument="&lt;webctrl aaname=' ' css-selector='body&amp;gt;main&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;ul&amp;gt;li&amp;gt;button' idx='2' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' ' class='pagination__button pagination__button--next js-next-page button button-primary button-primary--outline button--regular button--icon' tag='BUTTON' type='button' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAYAAAAehFoBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEASURBVFhH7dkxCsIwGIZhZ1dP4YU8hosXcPEQ4ughnMXFyVGHbjoKIoI4SeQtTYiu5rP95X8hUNJQnpRCoe0FY9kGH3ePsBidwmRwCOP+vtWBAQumvATmBIs280t43J7NbHthwIIpRycwu2FB18KELZbA7KQLd/YzTNhiCcxz09Vym4MVOVidg9U5WJ2DY9X6Xo/SycDTYVVfZzU7NzNlkoGBcp3SaBmYFGgpmEqj5WAqif4JeLu8JjDH3yQHl8SSFFwaSzKwAksycHxxlMSSDGzu1azKweocrM7B6hys7j/A5j5om/tlYO6nDHGC3bCI56bNgQFLjqU3sIWMgUN4AXGm9fVzFl2kAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NExtractData.NextLink>
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.zapimoveis.com.br/aluguel/imoveis/rj+teresopolis/?pagina=31&amp;transacao=Aluguel&amp;tipo=Im%C3%B3vel%20usado&amp;onde=,Rio%20de%20Janeiro,Teres%C3%B3polis,,,,,city,BR%3ERio%20de%20Janeiro%3ENULL%3ETeresopolis,-22.417004,-42.975538," DesignTimeRectangle="768, -5600, 1024, 6240" FriendlyName="'Destaque R$'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;main&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div' parentid='app' tag='DIV' /&gt;" Guid="3e486b67-8bc3-4aef-910d-ee37c7ddb11c" InformativeScreenshot="ba6ec44650172bb8e56cf555354d5405.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Imóveis para alugar em Teresópolis, RJ - ZAP Imóveis - Página 31' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+              </uix:NExtractData.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NExtractData>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 2576, 1096" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMOSURBVFhHvZZLTxNhFIaPYcF0wAvqH9AYQRMW/grjlcS4MJGCWinl0gvIxrgiJtZoogtNTEQXcgnG6Iq9C3cuuJS2XERrNCQsTLwQiGGBx/d05oNxOpcW2y6edBKGPu858w4f1KulKabPzYLVCrLcq80lo/UzdOPge7oaWKaOQI5+X6onFeAH4EqTqEu/DNfmqIWYJk7EaDNcsxUgZ7+53EDOkdrPfJJYn2juJ44S8TWqToB4XYa7tU+Myb+8br5J3A15OwhWIYDIe7QlPkXM48dvp7mP3vJ1WuLL9ITbtgN8j+nz+IXSiOc/ncWCkp+DfLQpyVg7cwcIgjbQTg9VgCxYB2ulENUzP6N69iOuXeVn4RlrusMcx0UYtJpyk3yALm1mT0SbbiiWTm1K2N2lpRA+O2jfhPHMjcmHG+8xx3DhIAebKgBFtClfwtpkHrk/GsgSxBfBpl2u1j52zJxc1l4oFwYtAaZdwbRgkroDKcLKKaEvgMVbVrFVfgbfnZ/cWz4ib4JnAEM8ZYgxsYj79EWZPOIml8lHmu56rV0YB/lX0TGAEncVioV+N7lf4UyGAOWxB9gSm8/YXLUSC31O8iILJ7wBhtwawJCbz9hZLHiuvYjCPQPbcmsAa7ksq7by/4Wzy1WAeGA2P63DxIryFM4JFSCOyR3EgmvhZPJRkSdw4S5/Dpzlgk+AHid5CYWbAM5iASchX3EP4FM4HCzer1ph4RQibjVxCTDgJJfJ5T0fbrzvV7hXwFvsEcB/clm7u7ywcE5ihS2Af+G81/5v4bzECiNASgKUr3DFiBVGgHSL8R9O4eRFFu4BKE2skAAQfrPLSyjc6I7ECjOA++TehRNSCJDGZ24HZDhEe/EI5pNW+Wl8bxGFKw8hOkBxbQ4lzIz1aB/WzxN/xXmeweR/Ki5vozUEaKBEIIMTcYEwecPw0WQN/ra/q4JcMALEtSxhcho6/Ii4F8UI00YV5IIRILjrFz09AnkM8k4QpBcON1eGEO2nVlqllQuHiAcgx/EIavDDx2AFrFaQFQ7Rvr+8QvYRCGzXYQAAAABJRU5ErkJggg==" InformativeScreenshot="a5b74aec7d0fc286b0a0ddc61a3971a9.png" Selector="&lt;html app='chrome.exe' title='ZAP Imóveis | Apartamentos, Casas e Imóveis à Venda e para Alugar' /&gt;" Url="[in_config(&quot;URL_ZAP&quot;).ToString]" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <ui:BulkAddQueueItems TimeoutMS="{x:Null}" DisplayName="Bulk Add Queue Items" FolderPath="[in_config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="434,132" sap2010:WorkflowViewState.IdRef="BulkAddQueueItems_1" QueueItemsDataTable="[dt_Apartamentos]" QueueName="[in_config(&quot;OrchestratorQueueName&quot;).ToString]" />
+  </Sequence>
+</Activity>
